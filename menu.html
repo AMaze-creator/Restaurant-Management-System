@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong Tastes - Menu</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Bong Tastes</h2>
+    
+            <ul class="menu">
+                <li class="nav_li nav_icon"><a href="index.html">Home</a></li>
+                <li class="nav_li nav_icon"><a href="index.html#about">About</a></li>
+                <li class="nav_li nav_icon"><a href="menu.html">Menus</a></li>
+                <li class="nav_li nav_icon"><a href="index.html#contact">Contact</a></li>
+            </ul>
+            
+            <a href="Tbooking.html"><button class="table table_option">
+                <span>Find a table</span>
+            </button></a>
+            
+            <label for="toggle" class="hambarg">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <i class="fa fa-times" id="closebtn"></i>
+
+        </nav>
+        
+    </header>
+    <main class="main">
+        <div class="left">
+            <div class="search-control">
+                <label for="manu-catagory">
+                    <h2 class="cat">Select Category:</h2>
+                </label>
+                <select id="manu-catagory">
+                    <option value="all">All Category</option>
+                    <option value="starters">Starters</option>
+                    <option value="main-course">Main Course</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search by dish name">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+
+            <div class="main-div">
+                <div class="menu-grid" id="menu-items">
+                    <!-- Menu items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2 class="order-title">Order Summury</h2>
+
+            <div class="customer-info">
+                <div class="input-group">
+                    <input type="text" id="customer-name" placeholder="Customer Name" class="customer-input" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="phone-number" placeholder="Phone Number" class="customer-input" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+            </div>
+            <div class="delivery-time-container">
+                <label for="deliveryTime">Set Delivery Time:</label>
+                <input type="time" id="deliveryTime" class="delivery-css" min="10:00" max="21:00">
+                <span class="error-message" id="time-error"></span>
+            </div>
+            <div class="delivery-date-container">
+                <label for="deliveryDate">Set Delivery Date:</label>
+                <input type="date" id="deliveryDate" class="delivery-css" min="">
+                <span class="error-message" id="date-error"></span>
+            </div>
+
+            <div class="order-table">
+                <div class="order-header">
+                    <div class="order-col item-col">Item</div>
+                    <div class="order-col price-col">Price</div>
+                    <div class="order-col qty-col">Quantity</div>
+                    <div class="order-col total-col">Totals</div>
+                    <div class="order-col delete-col">Delete</div>
+                </div>
+            </div>
+            <div class="main-order-div">
+                <div id="order-items" class="order-items">
+                    <div class="empty-order">No items added to order yet</div>
+                </div>
+            </div>
+            <!-- Total section  -->
+            <div id="invoice-section" style="display: none;">
+                <div class="total-section">
+                    <span class="total-text">Total: ₹<span id="total-price">0</span> </span>
+                </div>
+                <div class="invo-gen">
+                    <button id="generate-invoice" class="invo-btn">Generate Invoice</button>
+                </div>
+            </div>
+            <!-- Validation Message -->
+            <div id="validation-message" class="validation-message"></div>
+        </div>
+
+    </main>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+    
+    <!-- Your scripts -->
+    <script type="module" src="script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong Tastes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Bong Tastes</h2>
+            <ul class="menu">
+                <li class="nav_li nav_icon"><a href="index.html">Home</a></li>
+                <li class="nav_li nav_icon"><a href="#about">About</a></li>
+                <li class="nav_li nav_icon"><a href="menu.html">Menus</a></li>
+                <li class="nav_li nav_icon"><a href="#contact">Contact</a></li>
+                <li class="nav_li nav_icon"><a href="admin.html">Admin</a></li>
+            </ul>
+
+            <a href="Tbooking.html"><button class="table table_option">
+                    <span>Find a table</span>
+                </button></a>
+            <label for="toggle" class="hambarg">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <i class="fa fa-times" id="closebtn"></i>
+        </nav>
+    </header>
+    <main>
+        <div class="background">
+            <div class="bgimg"></div>
+            <div class="welcome">
+                <h1 class="great"><span class="f1">Welcome to </span><span class="f2">Bong Tastes</span></h1>
+                <p>Just Eat—We Even Chew for You!</p>
+                <button class="option table_option"><a href="menu.html">Order
+                        Menu</a></button>
+                <a href="Tbooking.html"><button class="option table_option">Book Table</button></a>
+            </div>
+        </div>
+        <section id="about">
+            <div class="container">
+                <div class="background-overlay"></div>
+
+                <main class="content">
+                    <!-- Left side - Image -->
+                    <div class="image-container">
+                        <img src="image/bengoli-thali-in-black_LE_upscale_magic_x4_strength_75_similarity_50.jpg">
+                    </div>
+
+                    <!-- Right side - Content -->
+                    <div class="text-content">
+                        <h1>Welcome to <p class="tagline">Bong Tastes</p> — the true taste of West Bengal!</h1>
+
+                        <div class="description">
+                            <p>At Bong Tastes, we serve authentic Bengali cuisine made with love and tradition. From
+                                flavorful curries to classic sweets, every dish brings you closer to the heart of
+                                Bengal.</p>
+
+                            <p>We also offer beautifully decorated rooms for special moments — perfect for birthdays,
+                                anniversaries, family gatherings, and private parties.</p>
+
+                            <p>Come enjoy great food, warm hospitality, and unforgettable memories with us!</p>
+
+                            <p class="motto">Bong Tastes — Where every meal feels like home.</p>
+                        </div>
+
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check"></i> Authentic Bengali cuisine</li>
+                            <li><i class="fa-solid fa-check"></i> Beautifully decorated party rooms</li>
+                            <li><i class="fa-solid fa-check"></i> Perfect for special occasions and gatherings</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <section class="footer">
+            <div class="contener">
+                <div class="flex">
+                    <div class="op box">
+                        <h3><b>Bong Tastes</b></h3>
+                        <p>Panskura Banamali callage</p>
+                        <p>panskura, pin-711312</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3><b>Contact info</b></h3>
+                        <div class="op information">
+                            <a href="#" style="text-decoration: none;"><i class="fas fa-phone"></i> +91 9735648256</a>
+                            <a href="#" style="text-decoration: none;"><i class="fas fa-phone"></i> +91 9831564785</a>
+                            <a href="#" style="text-decoration: none;"><i class="fas fa-envelope"></i>
+                                bongtastes@gmail.com</a>
+                            <a href="#" style="text-decoration: none;"><i class="fas fa-map-marker"></i> Howrah, West
+                                Bengol</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3><b>Quick Link</b></h3>
+                        <div class="op link">
+                            <a href="index.html" style="text-decoration: none;"><i class="fas fa-arrow-right"></i> Home
+                            </a>
+                            <a href="#about" style="text-decoration: none;"><i class="fas fa-arrow-right"></i> About
+                            </a>
+                            <a href="menu.html" style="text-decoration: none;"><i class="fas fa-arrow-right"></i> Menu
+                            </a>
+                            <a href="Tbooking.html" style="text-decoration: none;"><i class="fas fa-arrow-right"></i>
+                                Table Booking
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box Newsletter">
+                        <h3><b>Newsletter</b></h3>
+                        <p>Subscribe for letest update</p>
+                        <form id="newsletterForm">
+                            <input type="email" id="newsletterEmail" placeholder="Your email" class="email" required>
+                            <button class="btn" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+    
+    <!-- Your scripts -->
+    <script type="module" src="database.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong Tastes - Invoice</title>
+    <link rel="stylesheet" href="invo_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="invoice-contener">
+        <div class="invoice-header">
+            <div class="logo">Bong Tastes</div>
+            <div class="invoice-tittle">
+                <h1>Invoice</h1>
+                <p id="invoice-date">Date:</p>
+                <p id="invoice-time">Time:</p>
+                <p id="invoice-id">Invoice-id:</p>
+                <p id="database-order-id" style="display: none;">Database ID:</p>
+            </div>
+        </div>
+        <div class="invoice-customer">
+            <div class="customer-details">
+                <h3>Coustomer Information</h3>
+                <p><strong>Name:</strong> <span id="customer-name-display"></span></p>
+                <p><strong>Phone:</strong> <span id="phone-number-display"></span></p>
+                <p><strong>Delivery Date:</strong> <span id="delivery-date-display"></span></p>
+                <p><strong>Delivery Time:</strong> <span id="delivery-time-display"></span></p>
+            </div>
+        </div>
+
+        <div class="invoice-item">
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-item-body">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right"><strong>Grand Total:</strong></td>
+                        <td id="invoice-total">₹0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="invoice-footer">
+            <p>Thank you for your order!</p>
+            <p>Bong Tastes - Delicious food, delivered with love.</p>
+        </div>
+        <div class="invoice-actions">
+            <button id="print-invoice" class="print-btn">
+                <i class="fas fa-print"></i> Print Invoice
+            </button>
+            <button id="back-to-order" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Order
+            </button>
+        </div>
+    </div>
+    <script src="invo_script.js"></script>
+</body>
+</html>

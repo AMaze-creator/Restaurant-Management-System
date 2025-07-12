@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong Tastes-Table reservation</title>
+    <link rel="stylesheet" href="T_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Bong Tastes</h2>
+
+            <ul class="menu">
+                <li class="nav_li nav_icon"><a href="index.html">Home</a></li>
+                <li class="nav_li nav_icon"><a href="index.html#about">About</a></li>
+                <li class="nav_li nav_icon"><a href="menu.html">Menus</a></li>
+                <li class="nav_li nav_icon"><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <a href="Tbooking.html"><button class="table table_option">
+                    <span>Find a table</span>
+                </button></a>
+
+            <label for="toggle" class="hambarg">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <i class="fa fa-times" id="closebtn"></i>
+
+        </nav>
+
+    </header>
+    <form action="post" method="post">
+        <div class="background">
+            <div class="bgimg">
+                <div class="contener">
+                </div>
+            </div>
+            <div class="booking">
+                <h1>Reserve Your Table</h1>
+                <div class="input-group">
+                    <label for="name">Customer Name: </label>
+                    <input type="text" id="customer-name" placeholder="Enter your name" class="customer-input" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="number">Phone Number:</label>
+                    <input type="number" id="phone-number" placeholder="Phone Number" class="customer-input" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+                <div class="separetor"></div>
+                <div class="input-group">
+                    <label for="guest">Number of Guest:</label>
+                    <select id="guest">
+                        <!-- <option value="" disabled selected>Plese Select</option> -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="date-time">
+                    <div class="re-date">
+                        <label for="date">Reservation Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="re-time">
+                        <label for="time">Reservation Time(9:00AM - 11:00PM)</label>
+                        <input type="time" name="9-pm" id="time" required>
+                    </div>
+                </div>
+                <div class="note">
+                    <label for="comment">Spaical notes</label>
+                    <br>
+                    <textarea id="comment" name="comment" cols="50" rows="4"></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit" class="reserve">Reserve</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    
+    <!-- Message container -->
+    <div id="notification" class="notification hidden">
+        <span id="notification-message"></span>
+        <button id="notification-close" class="notification-close">&times;</button>
+    </div>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Your scripts -->
+    <script type="module" src="T_sript.js"></script>
+</body>
+
+</html>

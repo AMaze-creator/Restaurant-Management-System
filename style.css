@@ -20,8 +20,15 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 60px;
+    top: 0;
     margin-top: 20px;
     align-content: center;
+    transition: background-color 0.3s, margin-top 0.3s;
+}
+
+header.scrolled {
+    background-color: #000 !important;
+    margin-top: 0;
 }
 
 .navbar {

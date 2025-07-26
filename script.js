@@ -35,6 +35,16 @@ document.addEventListener('click', (event) => {
 
 // Handle newsletter subscription form
 document.addEventListener('DOMContentLoaded', () => {
+    // Navbar scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
     console.log('DOM loaded, setting up newsletter form handler');
     const newsletterForm = document.getElementById("newsletterForm");
     
